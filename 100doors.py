@@ -16,12 +16,11 @@ def main():
     for i in range(101):  # init; 101 because 0->100
         doors.append(False)
 
-    for i in range(1, len(doors)+1):
+    for i in range(1, len(doors)):
         OpenDoors(i)
     opened = []
-    for i in range(1, len(doors)):
+    for i in range(1, len(doors)):  # beautifying output
         if doors[i]:
-            # print(i)
             opened.append(str(i))
     print("The following doors are open:")
     print(", ".join(opened))
